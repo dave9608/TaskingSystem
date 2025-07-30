@@ -1,0 +1,15 @@
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\bin\Debug\net8.0\TaskingSystem.Application.deps.json
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\bin\Debug\net8.0\TaskingSystem.Application.dll
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\bin\Debug\net8.0\TaskingSystem.Application.pdb
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\bin\Debug\net8.0\TaskingSystem.Domain.dll
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\bin\Debug\net8.0\TaskingSystem.Domain.pdb
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\obj\Debug\net8.0\TaskingSystem.Application.csproj.AssemblyReference.cache
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\obj\Debug\net8.0\TaskingSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\obj\Debug\net8.0\TaskingSystem.Application.AssemblyInfoInputs.cache
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\obj\Debug\net8.0\TaskingSystem.Application.AssemblyInfo.cs
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\obj\Debug\net8.0\TaskingSystem.Application.csproj.CoreCompileInputs.cache
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\obj\Debug\net8.0\TaskingS.1E6191F4.Up2Date
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\obj\Debug\net8.0\TaskingSystem.Application.dll
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\obj\Debug\net8.0\refint\TaskingSystem.Application.dll
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\obj\Debug\net8.0\TaskingSystem.Application.pdb
+D:\Source\.NET\TaskingSystem\TaskingSystem.Application\obj\Debug\net8.0\ref\TaskingSystem.Application.dll
