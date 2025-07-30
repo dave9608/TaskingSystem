@@ -39,7 +39,11 @@ PS - The comments endpoints were not part of the main spec, I just added it for 
   * TaskingSystem.Domain/: Core entities and rules.
   * TaskingSystem.Infrastructure/: Database and service implementations.
 
-
+## **Future Expansion**
+* Authentication and Authorization: Securing our endpoints with token like JWT token to ensure only for example that an admin user can complete a task
+* Input Validation: We can add some more improved input validation and cleaning/trimming the inputs to try and avoid invalid data.
+* We can replace our current MediatR notifications with actual dedicated message que, something like RabbitMQ or maybe an email service that sends reminder emails.
+* I would add some audit fields like created at, created by, last modified at
 
 ## **How to Run**
 
