@@ -2,6 +2,8 @@
 
 This is a lightweight tasking system backend built with ASP.NET Core, following Clean Architecture. It offers endpoints to manage tasks and users, including sub-tasks and error handling.
 
+PS - The comments endpoints were not part of the main spec, I just added it for myself to confirm testing everything works well with the backend, hence I have excluded them below.
+
 ## **Features**
 
 ### **Tasks**
