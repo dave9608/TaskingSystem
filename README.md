@@ -1,4 +1,4 @@
-﻿Tasking System Backend
+Tasking System Backend
 A lightweight tasking system backend built with ASP.NET Core, adhering to Clean Architecture principles. It provides a comprehensive set of endpoints for managing tasks and users, including sub-task creation and robust error handling.
 Features
 Tasks
@@ -28,52 +28,86 @@ Global Exception Handling: Custom middleware intercepts exceptions and returns s
 
 Project Structure
 The solution is organized into four main projects, each with a distinct responsibility:
+
 src/
-├── TaskingSystem.Api/                    # Presentation Layer: Exposes the application via a Web API
-│   ├── Contracts/                        # DTOs defining API request/response shapes
-│   │   ├── Tasks/
-│   │   └── Users/
-│   ├── Controllers/                      # API controllers for endpoints
-│   │   ├── TasksController.cs
-│   │   └── UsersController.cs
-│   ├── Middleware/                       # Custom middleware
-│   │   └── GlobalExceptionHandlingMiddleware.cs
-│   └── Program.cs                        # Application entry point and DI configuration
-│
-├── TaskingSystem.Application/            # Application Layer: Business logic and use cases
-│   ├── Abstractions/                     # Interfaces for data access and services
-│   │   ├── ITaskRepository.cs
-│   │   ├── IUserRepository.cs
-│   │   ├── INotificationService.cs
-│   │   └── IUnitOfWork.cs
-│   ├── Exceptions/                       # Custom exceptions
-│   │   └── NotFoundException.cs
-│   └── Features/                         # Feature-specific logic
-│       ├── Tasks/
-│       │   ├── Commands/                 # Task modification use cases
-│       │   ├── Queries/                  # Task retrieval use cases
-│       │   └── EventHandlers/            # Asynchronous task event handlers
-│       └── Users/
-│           ├── Commands/                 # User modification use cases
-│           └── Queries/                  # User retrieval use cases
-│
-├── TaskingSystem.Domain/                 # Domain Layer: Core business entities and rules
-│   ├── Entities/                         # Core entities
-│   │   ├── Task.cs
-│   │   └── User.cs
-│   ├── Enums/                            # Enumerations
-│   │   └── TaskStatus.cs
-│   └── Events/                           # Domain events
-│       └── TaskAssignedEvent.cs
-│
-└── TaskingSystem.Infrastructure/          # Infrastructure Layer: External concerns
-    ├── Persistence/                      # Database-related implementations
-    │   ├── Migrations/                   # EF Core migration files
-    │   ├── TaskingDbContext.cs           # EF Core database context
-    │   ├── TaskRepository.cs             # ITaskRepository implementation
-    │   └── UserRepository.cs             # IUserRepository implementation
-    └── Services/                         # External service implementations
-        └── ConsoleNotificationService.cs # INotificationService implementation
+TaskingSystem.Api/ (Presentation Layer: Exposes the application via a Web API)
+Contracts/ (DTOs defining API request/response shapes)
+Tasks/
+Users/
+
+
+Controllers/ (API controllers for endpoints)
+TasksController.cs
+UsersController.cs
+
+
+Middleware/ (Custom middleware)
+GlobalExceptionHandlingMiddleware.cs
+
+
+Program.cs (Application entry point and DI configuration)
+
+
+TaskingSystem.Application/ (Application Layer: Business logic and use cases)
+Abstractions/ (Interfaces for data access and services)
+ITaskRepository.cs
+IUserRepository.cs
+INotificationService.cs
+IUnitOfWork.cs
+
+
+Exceptions/ (Custom exceptions)
+NotFoundException.cs
+
+
+Features/ (Feature-specific logic)
+Tasks/
+Commands/ (Task modification use cases)
+Queries/ (Task retrieval use cases)
+EventHandlers/ (Asynchronous task event handlers)
+
+
+Users/
+Commands/ (User modification use cases)
+Queries/ (User retrieval use cases)
+
+
+
+
+
+
+TaskingSystem.Domain/ (Domain Layer: Core business entities and rules)
+Entities/ (Core entities)
+Task.cs
+User.cs
+
+
+Enums/ (Enumerations)
+TaskStatus.cs
+
+
+Events/ (Domain events)
+TaskAssignedEvent.cs
+
+
+
+
+TaskingSystem.Infrastructure/ (Infrastructure Layer: External concerns)
+Persistence/ (Database-related implementations)
+Migrations/ (EF Core migration files)
+TaskingDbContext.cs (EF Core database context)
+TaskRepository.cs (ITaskRepository implementation)
+UserRepository.cs (IUserRepository implementation)
+
+
+Services/ (External service implementations)
+ConsoleNotificationService.cs (INotificationService implementation)
+
+
+
+
+
+
 
 How to Run
 Prerequisites
