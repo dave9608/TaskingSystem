@@ -28,52 +28,99 @@ Global Exception Handling: A custom middleware intercepts exceptions and formats
 
 Project Structure
 The solution is organized into four main projects, each with a specific responsibility:
-/src
-├── TaskingSystem.Api/                // Presentation Layer: Exposes the application via a Web API
-│   ├── Contracts/                    // DTOs defining the shape of API request bodies
-│   │   ├── Tasks/
-│   │   └── Users/
-│   ├── Controllers/
-│   │   ├── TasksController.cs        // API controller for task-related endpoints
-│   │   └── UsersController.cs        // API controller for user-related endpoints
-│   ├── Middleware/
-│   │   └── GlobalExceptionHandlingMiddleware.cs // Catches exceptions and formats error responses
-│   └── Program.cs                    // Application entry point and service registration (DI)
-│
-├── TaskingSystem.Application/        // Application Layer: Contains all business logic and use cases
-│   ├── Abstractions/
-│   │   ├── ITaskRepository.cs        // Contract for task data access
-│   │   ├── IUserRepository.cs        // Contract for user data access
-│   │   ├── INotificationService.cs   // Contract for sending notifications
-│   │   └── IUnitOfWork.cs            // Contract for saving changes to the database atomically
-│   ├── Exceptions/
-│   │   └── NotFoundException.cs      // Custom exception for "not found" scenarios
-│   └── Features/
-│       ├── Tasks/
-│       │   ├── Commands/             // Use cases that modify task state
-│       │   ├── Queries/              // Use cases that read task state
-│       │   └── EventHandlers/        // Handlers for asynchronous task events
-│       └── Users/
-│           ├── Commands/             // Use cases that modify user state
-│           └── Queries/              // Use cases that read user state
-│
-├── TaskingSystem.Domain/             // Domain Layer: Core business entities and rules. No dependencies
-│   ├── Entities/
-│   │   ├── Task.cs                   // The core Task entity, with sub-task support
-│   │   └── User.cs                   // The User entity
-│   ├── Enums/
-│   │   └── TaskStatus.cs             // Enum for the state of a task
-│   └── Events/
-│       └── TaskAssignedEvent.cs      // Event published when a task is assigned
-│
-└── TaskingSystem.Infrastructure/     // Infrastructure Layer: Implements external concerns
-    ├── Persistence/
-    │   ├── Migrations/               // EF Core database migration files
-    │   ├── TaskingDbContext.cs       // Entity Framework database context
-    │   ├── TaskRepository.cs         // Implementation of ITaskRepository
-    │   └── UserRepository.cs         // Implementation of IUserRepository
-    └── Services/
-        └── ConsoleNotificationService.cs // Implementation of INotificationService
+📁 TaskingSystem.Api (Presentation Layer)
+Exposes the application via a Web API
+
+Contracts/ - DTOs defining the shape of API request bodies
+
+Tasks/
+Users/
+
+
+Controllers/
+
+TasksController.cs - API controller for task-related endpoints
+UsersController.cs - API controller for user-related endpoints
+
+
+Middleware/
+
+GlobalExceptionHandlingMiddleware.cs - Catches exceptions and formats error responses
+
+
+Program.cs - Application entry point and service registration (DI)
+
+📁 TaskingSystem.Application (Application Layer)
+Contains all business logic and use cases
+
+Abstractions/
+
+ITaskRepository.cs - Contract for task data access
+IUserRepository.cs - Contract for user data access
+INotificationService.cs - Contract for sending notifications
+IUnitOfWork.cs - Contract for saving changes to the database atomically
+
+
+Exceptions/
+
+NotFoundException.cs - Custom exception for "not found" scenarios
+
+
+Features/
+
+Tasks/
+
+Commands/ - Use cases that modify task state
+Queries/ - Use cases that read task state
+EventHandlers/ - Handlers for asynchronous task events
+
+
+Users/
+
+Commands/ - Use cases that modify user state
+Queries/ - Use cases that read user state
+
+
+
+
+
+📁 TaskingSystem.Domain (Domain Layer)
+Core business entities and rules. No dependencies
+
+Entities/
+
+Task.cs - The core Task entity, with sub-task support
+User.cs - The User entity
+
+
+Enums/
+
+TaskStatus.cs - Enum for the state of a task
+
+
+Events/
+
+TaskAssignedEvent.cs - Event published when a task is assigned
+
+
+
+📁 TaskingSystem.Infrastructure (Infrastructure Layer)
+Implements external concerns
+
+Persistence/
+
+Migrations/ - EF Core database migration files
+TaskingDbContext.cs - Entity Framework database context
+TaskRepository.cs - Implementation of ITaskRepository
+UserRepository.cs - Implementation of IUserRepository
+
+
+Services/
+
+ConsoleNotificationService.cs - Implementation of INotificationService
+
+
+
 How to Run
 Prerequisites
 
